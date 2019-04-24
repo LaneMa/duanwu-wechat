@@ -1,12 +1,53 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/solo/solo",
+    "pages/match/match",
+    "pages/data/data",
+    "pages/groups/groups"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "端午之战",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/index.png",
+        "selectedIconPath":"images/index_selected.png"
+      },
+      {
+        "pagePath": "pages/groups/groups",
+        "text": "分组",
+        "iconPath": "images/group.png",
+        "selectedIconPath": "images/group_selected.png"
+      },
+      {
+        "pagePath": "pages/solo/solo",
+        "text": "单挑赛",
+        "iconPath": "images/solo.png",
+        "selectedIconPath": "images/solo_selected.png"
+      },
+      {
+        "pagePath": "pages/match/match",
+        "text": "正赛",
+        "iconPath": "images/match.png",
+        "selectedIconPath": "images/match_selected.png"
+      },
+      {
+        "pagePath": "pages/data/data",
+        "text": "技术统计",
+        "iconPath": "images/data.png",
+        "selectedIconPath": "images/data_selected.png"
+      }
+    ]
   }
 }
