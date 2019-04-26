@@ -1,7 +1,7 @@
 <view class="top">
-    <view class="weui-navbar__title"><image style="width: 25px; height: 25px;"  src="/images/left-circle.png" bindtap='tapLeft'></image></view>
-    <view class="weui-navbar__title">{{session}}</view>
-    <view class="weui-navbar__title"><image style="width: 25px; height: 25px;"  src="/images/right-circle.png" bindtap='tapRight'></image></view>
+    <view><image style="width: 25px; height: 25px;"  src="/images/left-circle.png" bindtap='tapLeft'></image></view>
+    <view>{{session}}</view>
+    <view><image style="width: 25px; height: 25px;"  src="/images/right-circle.png" bindtap='tapRight'></image></view>
 </view>
 <view class="suibian">
   <block wx:for="{{players}}" wx:for-item="item" wx:key="{{name}}" wx:for-index="index">
