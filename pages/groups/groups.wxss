@@ -1,12 +1,12 @@
 /* pages/groups/groups.wxss */
-/* 
+
 .group {
   display: flex;
   width: 100%;
   justify-content: left;
   height: 3rem;
   align-items: center;
-} */
+}
 
 ec-canvas {
   width: 100%;

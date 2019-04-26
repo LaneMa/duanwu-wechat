@@ -1,6 +1,6 @@
 <!--pages/groups/groups.wxml-->
 <!-- <<text>pages/groups/groups.wxml</text> -->
-<!-- <view>
+<view>
   <view><button bindtap='start'>开始</button></view>
   <view><button bindtap='stop'>结束</button></view>
   <view class = "group">
@@ -27,8 +27,8 @@
       <view>{{item}}, </view>
     </view>
   </view>
-</view> -->
-
+</view>
+<!-- 
 <view class="container">
   <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ ec }}"></ec-canvas>
-</view>
+</view> -->

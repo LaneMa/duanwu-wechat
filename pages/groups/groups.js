@@ -12,7 +12,7 @@ function initChart(canvas, width, height) {
     "children": [{
       "name": "a",
      // "symbolSize":[32,32],
-      "symbol":"image://http://img1.imgtn.bdimg.com/it/u=1393987749,3422146058&fm=26&gp=0.jpg",
+      // "symbol":"image://http://img1.imgtn.bdimg.com/it/u=1393987749,3422146058&fm=26&gp=0.jpg",
       "children": [{
         "name": "a1"
       }, {
