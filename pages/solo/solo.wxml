@@ -6,7 +6,7 @@
 <view class="suibian">
   <block wx:for="{{players}}" wx:for-item="item" wx:key="{{name}}" wx:for-index="index">
   <view class="player">
-  
+    <image class="touxiang" src="../../images/{{item.name}}.png"></image>
     <view class='pname'>{{item.name}} </view> 
     <view class='pscore'>{{item.score}}</view>
     <view class="technical"> 

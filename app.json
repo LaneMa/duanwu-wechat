@@ -21,8 +21,8 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"images/index.png",
-        "selectedIconPath":"images/index_selected.png"
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_selected.png"
       },
       {
         "pagePath": "pages/groups/groups",
@@ -49,5 +49,6 @@
         "selectedIconPath": "images/data_selected.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
