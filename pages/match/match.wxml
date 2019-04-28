@@ -40,7 +40,7 @@
       <view class="th">篮板</view>
       <view class="th">犯规</view>
     </view>
-    <block wx:for="{{game}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item">
+    <block wx:for="{{game}}" wx:for-index="idx" wx:key="{{name}}" wx:for-item="item">
       <view class="tr bg-g" wx:if="{{idx%2==0}}">
         <view class="td">{{item.name}}</view>
         <view class="td">{{item.one}}</view>
