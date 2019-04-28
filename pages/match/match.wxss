@@ -57,6 +57,11 @@
   padding-top: 10px;
 }
 
+.quarter {
+  padding-top: 10px;
+  color: blue;
+}
+
 .name-vs {
   display: flex;
   flex-direction: row;

@@ -3,6 +3,11 @@
     <view>{{title}}</view>
     <view><image style="width: 25px; height: 25px;"  src="/images/right-circle.png" bindtap='tapRight'></image></view>
 </view>
+<view class="technical_">
+    <button bindtap='tabQuarter' data-type='{{1}}' data-oprate="1" disabled="{{quarter == 4 ? true  : false}}">+</button>
+    <view class='quarter'>第{{quarter}}节</view>
+    <button bindtap='tabQuarter' data-type='{{1}}' data-operate="2" disabled="{{quarter == 1 ? true  : false}}">-</button>
+</view>
 <view wx:if="{{current == 1}}" class="suibian">
   <block wx:for="{{game}}" wx:for-item="item" wx:key="{{name}}" wx:for-index="index">
   <view class="player">

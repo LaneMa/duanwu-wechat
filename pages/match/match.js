@@ -10,6 +10,7 @@ Page({
     title: "正赛",
     current: 1,
     game: {},
+    quarter: 0,
   },
 
   tapLeft: function () {
@@ -66,6 +67,32 @@ Page({
     let _current = that.data.current - 1;
     let _team = that.data.titles[_current];
     wx.request({
+      url: app.globalData.host + 'main/quarter',
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        let _quarter = res.data;
+        if (_quarter == 0) {
+          _quarter += 1;
+          wx.request({
+            url: app.globalData.host + 'main/quarter/set?quarter=' + _quarter,
+            header: {
+              "Content-Type": "applciation/json"
+            },
+            method: "GET",
+            success: res => {
+
+            }
+          });
+        }
+        that.setData({
+          quarter: _quarter,
+        })
+      }
+    });
+    wx.request({
       url: app.globalData.host + 'main/team?team=' + "正赛",
       header: {
         "Content-Type": "applciation/json"
@@ -75,6 +102,30 @@ Page({
         that.setData({
           title: _team,
           game: res.data
+        })
+      }
+    });
+  },
+
+  tabQuarter: function (event) {
+    let that = this;
+    let _quarter = that.data.quarter + 1;
+    let data = event.currentTarget.dataset;
+    let operate = data.oprate;
+    if (operate == 1) {
+      _quarter = that.data.quarter + 1;
+    } else {
+      _quarter = that.data.quarter - 1;
+    }
+    wx.request({
+      url: app.globalData.host + 'main/quarter/set?quarter=' + _quarter,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          quarter: _quarter,
         })
       }
     });
