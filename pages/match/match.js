@@ -111,7 +111,7 @@ Page({
     let that = this;
     let _quarter = that.data.quarter + 1;
     let data = event.currentTarget.dataset;
-    let operate = data.oprate;
+    let operate = data.operate;
     if (operate == 1) {
       _quarter = that.data.quarter + 1;
     } else {
