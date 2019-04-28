@@ -1,18 +1,83 @@
-// pages/match/match.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    titles: ["正赛", "狼群", "湘北"],
+    title: "正赛",
+    current: 1,
+    game: {},
+  },
 
+  tapLeft: function () {
+    let that = this;
+    let _current = that.data.current - 1;
+    if (_current == 0) {
+      _current = 1;
+    }
+    let _team = that.data.titles[_current - 1];
+    wx.request({
+      url: app.globalData.host + 'main/team?team=' + _team,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          title: _team,
+          game: res.data,
+          current: _current
+        })
+      }
+    });
+  },
+
+  tapRight: function () {
+    let that = this;
+    let _current = that.data.current + 1;
+    if (_current > that.data.titles.length) {
+      _current = that.data.titles.length;
+    }
+    let _team = that.data.titles[_current - 1];
+    wx.request({
+      url: app.globalData.host + 'main/team?team=' + _team,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          title: _team,
+          game: res.data,
+          current: _current
+        })
+      }
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    let that = this;
+    let _current = that.data.current - 1;
+    let _team = that.data.titles[_current];
+    wx.request({
+      url: app.globalData.host + 'main/team?team=' + "正赛",
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          title: _team,
+          game: res.data
+        })
+      }
+    });
   },
 
   /**

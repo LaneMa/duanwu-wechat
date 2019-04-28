@@ -1,2 +1,65 @@
-<!--pages/match/match.wxml-->
-<text>pages/match/match.wxml</text>
+<view class="top">
+    <view><image style="width: 25px; height: 25px;"  src="/images/left-circle.png" bindtap='tapLeft'></image></view>
+    <view>{{title}}</view>
+    <view><image style="width: 25px; height: 25px;"  src="/images/right-circle.png" bindtap='tapRight'></image></view>
+</view>
+<view wx:if="{{current == 1}}" class="suibian">
+  <block wx:for="{{game}}" wx:for-item="item" wx:key="{{name}}" wx:for-index="index">
+  <view class="player">
+    <image class="touxiang" src="../../images/{{item.name}}.png"></image>
+    <view class='pscore'>{{item.score}}</view>
+    <view class="technical"> 
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-oprate="1">+</button>
+      <view class='score'>1分({{item.one}})</view>
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-operate="2" disabled="{{item.one == 0 ? true  : false}}">-</button>
+      </view>
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-oprate="1">+</button><view class='score'>2分({{item.two}})                              </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-operate="2" disabled="{{item.two == 0 ? true  : false}}">-</button>
+      </view>
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-oprate="1">+</button><view class='score'>3分({{item.three}})                            </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="2" disabled="{{item.three == 0 ? true  : false}}">-</button>
+      </view>
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-oprate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
+      </view>
+    </view>
+      </view>
+    <view  class="vs" wx:if="{{index==0}}">VS</view>
+  </block>
+</view>
+<view wx:if="{{current == 1}}"><button bindtap='tapEnd'>结束</button></view>
+<view wx:if="{{current == 2 || current == 3}}">
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">姓名</view>
+      <view class="th">罚球</view>
+      <view class="th">中投</view>
+      <view class="th">三分</view>
+      <view class="th">得分</view>
+      <view class="th">篮板</view>
+      <view class="th">犯规</view>
+    </view>
+    <block wx:for="{{game}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item">
+      <view class="tr bg-g" wx:if="{{idx%2==0}}">
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.one}}</view>
+        <view class="td">{{item.two}}</view>
+        <view class="td">{{item.three}}</view>
+        <view class="td">{{item.score}}</view>
+        <view class="td">{{item.backboard}}</view>
+        <view class="td">{{item.foul}}</view>
+      </view>
+      <view class="tr" wx:else>
+        <view class="td">{{item.name}}</view>
+        <view class="td">{{item.one}}</view>
+        <view class="td">{{item.two}}</view>
+        <view class="td">{{item.three}}</view>
+        <view class="td">{{item.score}}</view>
+        <view class="td">{{item.backboard}}</view>
+        <view class="td">{{item.foul}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
