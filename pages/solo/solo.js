@@ -50,7 +50,7 @@ Page({
     let data = event.currentTarget.dataset;
     let player = data.player;
     let type = data.type;
-    let operate = data.operate;
+    let operate = data.oprate;
     let url = "session/technical?";
     if (operate == 2) {
       url = "session/subtract?";
