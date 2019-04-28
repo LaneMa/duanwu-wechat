@@ -41,12 +41,6 @@
         "text": "正赛",
         "iconPath": "images/match.png",
         "selectedIconPath": "images/match_selected.png"
-      },
-      {
-        "pagePath": "pages/data/data",
-        "text": "技术统计",
-        "iconPath": "images/data.png",
-        "selectedIconPath": "images/data_selected.png"
       }
     ]
   },
