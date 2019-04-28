@@ -15,18 +15,18 @@
     <view class='pscore'>{{item.score}}</view>
     <view class="technical"> 
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-oprate="1">+</button>
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-operate="1">+</button>
       <view class='score'>1分({{item.one}})</view>
       <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-operate="2" disabled="{{item.one == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-oprate="1">+</button><view class='score'>2分({{item.two}})                              </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-operate="2" disabled="{{item.two == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-operate="1">+</button><view class='score'>2分({{item.two}})                              </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-operate="2" disabled="{{item.two == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-oprate="1">+</button><view class='score'>3分({{item.three}})                            </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="2" disabled="{{item.three == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="1">+</button><view class='score'>3分({{item.three}})                            </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="2" disabled="{{item.three == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-oprate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
       </view>
     </view>
       </view>
