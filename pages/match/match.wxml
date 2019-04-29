@@ -9,24 +9,30 @@
     <button bindtap='tabQuarter' data-type='{{1}}' data-operate="2" disabled="{{quarter == 1 ? true  : false}}">-</button>
 </view>
 <view wx:if="{{current == 1}}" class="suibian">
+  <modal title='请选择球员' hidden="{{modalHidden}}" bindcancel='modalCancel' bindConfirm='modalConfirm'>
+    这是一个模态弹窗
+  </modal>
   <block wx:for="{{game}}" wx:for-item="item" wx:key="{{name}}" wx:for-index="index">
   <view class="player">
     <image class="touxiang" src="../../images/{{item.name}}.png"></image>
     <view class='pscore'>{{item.score}}</view>
     <view class="technical"> 
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-oprate="1">+</button>
+      <button bindtap='tabTechnical' data-type='{{1}}' data-operate="1">+</button>
       <view class='score'>1分({{item.one}})</view>
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{1}}' data-operate="2" disabled="{{item.one == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-type='{{1}}' data-operate="2" disabled="{{item.one == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-oprate="1">+</button><view class='score'>2分({{item.two}})                              </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{2}}' data-operate="2" disabled="{{item.two == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-type='{{2}}' data-operate="1">+</button><view class='score'>2分({{item.two}})                              </view><button bindtap='tabTechnical' data-type='{{2}}' data-operate="2" disabled="{{item.two == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-oprate="1">+</button><view class='score'>3分({{item.three}})                            </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="2" disabled="{{item.three == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-type='{{3}}' data-operate="1">+</button><view class='score'>3分({{item.three}})                            </view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{3}}' data-operate="2" disabled="{{item.three == 0 ? true  : false}}">-</button>
       </view>
       <view class="technical_">
-      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-oprate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
+      <button bindtap='tabTechnical' data-type='{{4}}' data-operate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
+      </view>
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-type='{{5}}' data-operate="1">+</button><view class='score'>篮板({{item.foul}})</view><button bindtap='tabTechnical' data-type='{{5}}' data-operate="2" disabled="{{item.backboard == 0 ? true  : false}}">-</button>
       </view>
     </view>
       </view>
