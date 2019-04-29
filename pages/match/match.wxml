@@ -35,6 +35,9 @@
       <view class="technical_">
       <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="1">+</button><view class='score'>犯规({{item.foul}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{4}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
       </view>
+      <view class="technical_">
+      <button bindtap='tabTechnical' data-player='{{item}}' data-type='{{5}}' data-operate="1">+</button><view class='score'>篮板({{item.backboard}})</view><button bindtap='tabTechnical' data-player='{{item}}' data-type='{{5}}' data-operate="2" disabled="{{item.foul == 0 ? true  : false}}">-</button>
+      </view>
     </view>
       </view>
     <view  class="vs" wx:if="{{index==0}}">VS</view>
