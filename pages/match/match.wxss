@@ -26,9 +26,9 @@
 }
 
 .touxiang {
-  margin-left:30px;
-  width: 120px;
-  height: 120px;
+  margin-left:50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
