@@ -11,6 +11,11 @@ Page({
     current: 1,
     game: {},
     quarter: 0,
+    hiddenModal:true,
+    players:{},
+    alive:'',
+    type:0,
+    operate:1
   },
 
   tapLeft: function () {
@@ -130,7 +135,91 @@ Page({
       }
     });
   },
-
+  tabTechnical: function (event) {
+    let that = this;
+    let data = event.currentTarget.dataset;
+    wx.request({
+      url: app.globalData.host + "players/team?team=" + data.player.name,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          players:res.data
+        });
+      }
+    });
+    that.setData({
+      hiddenModal:false,
+      type:data.type,
+      operate: data.operate
+    })
+    
+  },
+  tapRadio: function (event) {
+    let that = this;
+    let data = event.currentTarget.dataset;
+    that.setData({
+      alive:data.player
+    })
+  },
+  modalCancel:function() {
+    let that = this;
+    that.setData({
+      alive: '',
+      hiddenModal:true
+    })
+  },
+  modalConfirm: function() {
+    let that = this;
+    let data = that.data;
+    if(!data.alive) {
+      return;
+    }
+    let url = "main/increase?";
+    if (data.operate == 2) {
+      url = "main/reduce?";
+    }
+    url = url + 'name=' + data.alive + "&type=" + data.type + "&quarter=" + data.quarter;
+    wx.request({
+      url: app.globalData.host + url,
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.setData({
+          alive: '',
+          hiddenModal: true
+        });
+        that.onLoad();
+      }
+    });
+    
+  },
+  tapEnd:function() {
+    let that = this;
+    wx.request({
+      url: app.globalData.host + "main/over",
+      header: {
+        "Content-Type": "applciation/json"
+      },
+      method: "GET",
+      success: res => {
+        that.onLoad();
+        wx.showModal({
+          content: '比赛已结束',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            }
+          }
+        });
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
