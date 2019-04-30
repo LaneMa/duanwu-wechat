@@ -51,6 +51,12 @@
   width: 50%;
 }
 
+.solo .right .title {
+  color: red;
+  font-family: LiSu;
+  font-size: 22px;
+}
+
 .solo .right text {
   padding-top: 10px;
 }
@@ -60,6 +66,8 @@
   margin-bottom: 10px;
   text-align: center;
   padding-bottom: 20px;
+  color: blue;
+  font-size: 30px;
 }
 
 .champion {
@@ -69,10 +77,13 @@
 }
 
 .champion .title {
-   display: flex;
-   text-align: center;
+  display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
+  color: red;
+  font-family: Lisu;
+  font-size: 30px;
 }
 
 .champion .content {
@@ -87,6 +98,10 @@
   flex-direction: column;
   justify-content:center; 
   width: 50%;
+}
+
+.ticket {
+  padding-top: 10px;
 }
 
 .data {
@@ -108,5 +123,8 @@
 
 .write-mod {
   writing-mode:vertical-rl;
+  margin-left: 50px;
+  font-size: 22px;
+  color: blue;
 }
 

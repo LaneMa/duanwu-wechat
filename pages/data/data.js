@@ -10,7 +10,8 @@ Page({
       titles:["单挑王","三分王","篮板王","冠军","MVP投票","MVP","技术统计"],
       title:"单挑王",
       titleIdx:0,
-      data:{}
+      data:{},
+      tickets:[]
   },
 
   /**
@@ -74,11 +75,58 @@ Page({
       method: "GET",
       success: res => {
         console.log(res);
+        let _tickets = [];
+        if (index == 4) {
+          for (let i = 0; i < res.data.champion_players.length; i++) {
+            let _ticket = {};
+            _ticket.name = res.data.champion_players[i].name;
+            _ticket.ticket = 0;
+            _tickets.push(_ticket);
+          }
+        }
         that.setData({
           data: res.data,
           titleIdx: index,
-          title: that.data.titles[index]
+          title: that.data.titles[index],
+          tickets: _tickets 
         })
+      }
+    });
+  },
+
+  setTicket: function (event) {
+    let that = this;
+    let data = event.currentTarget.dataset;
+    let player = data.player;
+    let type = data.type;
+    let operate = data.operate;
+    let _tickets = that.data.tickets;
+    for (let i = 0; i < _tickets.length; i++) {
+      if (_tickets[i].name == player) {
+        if (operate == 1) {
+          _tickets[i].ticket++;
+        }
+        if (operate == 2) {
+          _tickets[i].ticket--;
+        }
+      }
+    }
+    that.setData({
+      tickets: _tickets
+    })
+  },
+
+  tapEnd: function () {
+    let that = this;
+    wx.request({
+      url: app.globalData.host + "statistics/ticket",
+      header: {
+        "Content-Type": "applciation/x-www-form-urlencoded"
+      },
+      data: that.data.tickets,
+      method: "POST",
+      success: res => {
+        
       }
     });
   },
@@ -144,9 +192,9 @@ function getUrl(index) {
   } else if(index == 3) {
     url += "/champion";
   } else if(index == 4){
-    
+    url += "/champion";
   } else if(index == 5){
-
+    url += "/mvp";
   } else {
     url += "/statistics";
   }

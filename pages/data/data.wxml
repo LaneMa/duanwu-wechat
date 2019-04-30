@@ -11,7 +11,7 @@
       <text>{{data.name}}</text>
     </view>
     <view class="right">
-      <text>{{data.year}}dwb单挑王</text>
+      <text class="title">{{data.year}} dwb 单挑王</text>
       <text>{{data.win}}胜{{data.lose}}负</text>
       <text>三分:{{data.three}}</text>
       <text>两分:{{data.two}}</text>
@@ -28,7 +28,7 @@
       <text>{{data.name}}</text>
     </view>
     <view class="right">
-      <text>{{data.year}}dwb三分王</text>
+      <text class="title">{{data.year}} dwb 三分王</text>
       <text>三分总数:{{data.three}}</text>
     </view>
   </view>
@@ -42,7 +42,7 @@
       <text>{{data.name}}</text>
     </view>
     <view class="right">
-      <text>{{data.year}}dwb篮板王</text>
+      <text class="title">{{data.year}} dwb 篮板王</text>
     <text>篮板数:{{data.backboard}}</text>
     </view>
   </view>
@@ -52,7 +52,7 @@
 
 <view wx:if="{{titleIdx == 3}}" class="champion">
   <view class="title">
-    <view>{{data.year}}dwb冠军</view>
+    <view class="title">{{data.year}} dwb 冠军</view>
     <view>无锡站</view>
   </view>
   <view class="content">
@@ -67,4 +67,34 @@
       <view class='write-mod'>{{data.slogan}}</view>
     </view>
   </view>
+</view>
+
+<view wx:if="{{titleIdx == 4}}" class="champion">
+  <view class="title">
+    <view class="title">{{data.year}} dwb 无锡站</view>
+    <view>MVP投票</view>
+  </view>
+  <view class="content">
+    <view class="players"> 
+      <view wx:for="{{tickets}}" wx:for-item="item" wx:key="{{item.name}}" class='data'>
+        <button bindtap='setTicket' data-player='{{item.name}}' data-type='{{1}}' data-operate="1">+</button>
+        <view class='ticket'>{{item.name}} ({{item.ticket}}票)</view>
+        <button bindtap='setTicket' data-player='{{item.name}}' data-type='{{1}}' data-operate="2" disabled="{{item.ticket == 0 ? true  : false}}">-</button>
+      </view>
+    </view>
+  </view>
+  <view><button bindtap='tapEnd'>确认</button></view>
+</view>
+
+<view wx:if="{{titleIdx == 5}}">
+  <view class="solo">
+    <view class="left">
+      <view><image  class="touxiang" src='/images/{{data.name}}.png'></image></view>
+      <text>{{data.name}}</text>
+    </view>
+    <view class="right">
+      <text class="title">{{data.year}} dwb MVP</text>
+    </view>
+  </view>
+  <view class="slogan">{{data.slogan}}</view>
 </view>
