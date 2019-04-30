@@ -12,7 +12,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'session/count',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -26,7 +26,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'session/order?order='+that.data.current,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -59,7 +59,7 @@ Page({
     wx.request({
       url: app.globalData.host + url,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -76,7 +76,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'session/order?order=' + _current,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -99,7 +99,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'session/order?order=' + _current,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -119,14 +119,14 @@ Page({
     wx.request({
       url: app.globalData.host + 'session/rise?level=' + level,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
         wx.request({
           url: app.globalData.host + 'session/count',
           header: {
-            "Content-Type": "applciation/json"
+            "Content-Type": "application/json"
           },
           method: "GET",
           success: res => {

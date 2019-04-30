@@ -11,7 +11,7 @@ Page({
       title:"单挑王",
       titleIdx:0,
       data:{},
-      tickets:[]
+      tickets:{}
   },
 
   /**
@@ -24,7 +24,7 @@ Page({
     wx.request({
       url: app.globalData.host + url,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -46,7 +46,7 @@ Page({
     wx.request({
       url: app.globalData.host + url,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -80,7 +80,7 @@ Page({
     wx.request({
       url: app.globalData.host + url,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -128,12 +128,15 @@ Page({
 
   tapEnd: function () {
     let that = this;
+    console.log(that.data.tickets);
     wx.request({
       url: app.globalData.host + "statistics/ticket",
       header: {
-        "Content-Type": "applciation/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded"
       },
-      data: that.data.tickets,
+      data: {
+        ticketList: JSON.stringify(that.data.tickets)
+      },
       method: "POST",
       success: res => {
         

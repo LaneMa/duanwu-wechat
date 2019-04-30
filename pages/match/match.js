@@ -28,7 +28,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'main/team?team=' + _team,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -51,7 +51,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'main/team?team=' + _team,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -74,7 +74,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'main/quarter',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -84,7 +84,7 @@ Page({
           wx.request({
             url: app.globalData.host + 'main/quarter/set?quarter=' + _quarter,
             header: {
-              "Content-Type": "applciation/json"
+              "Content-Type": "application/json"
             },
             method: "GET",
             success: res => {
@@ -100,7 +100,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'main/team?team=' + "正赛",
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -125,7 +125,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'main/quarter/set?quarter=' + _quarter,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -141,7 +141,7 @@ Page({
     wx.request({
       url: app.globalData.host + "players/team?team=" + data.player.name,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -185,7 +185,7 @@ Page({
     wx.request({
       url: app.globalData.host + url,
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -203,7 +203,7 @@ Page({
     wx.request({
       url: app.globalData.host + "main/over",
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {

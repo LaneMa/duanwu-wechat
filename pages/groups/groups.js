@@ -18,7 +18,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'players/suspend',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -53,7 +53,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'players/suspend',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -101,7 +101,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'group',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {

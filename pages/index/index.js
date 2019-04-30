@@ -18,7 +18,7 @@ Page({
     wx.request({
       url: app.globalData.host + 'players',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
@@ -40,7 +40,7 @@ Page({
     wx.request({
       url: app.globalData.host + '',
       header: {
-        "Content-Type": "applciation/json"
+        "Content-Type": "application/json"
       },
       method: "GET",
       success: res => {
