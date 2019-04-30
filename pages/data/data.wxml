@@ -102,7 +102,7 @@
 
 <view wx:if="{{titleIdx == 6}}" class="champion">
   <view class="title">
-    <view class="title">{{data.year}} dwb 无锡站</view>
+    <view class="title">{{data[0].year}} dwb 无锡站</view>
     <view>技术统计</view>
   </view>
   <view class="suibian">
