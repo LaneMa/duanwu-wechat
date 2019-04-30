@@ -57,9 +57,10 @@
   </view>
   <view class="content">
     <view class="players"> 
-      <view wx:for="{{data.champion_players}}" wx:for-item="item" wx:key="{{name}}" class='data'>
+      <view wx:for="{{data.champion_players}}" wx:for-item="item" wx:key="{{name}}" class='data-ch'>
         <image src='/images/{{item.name}}.png' class="touxiang"></image>
-        <text>{{item.score}}分{{item.backboard}}板</text>
+        <text> {{item.name}} ： </text>
+        <text> {{item.score}}分 {{item.backboard}}板</text>
       </view>
     </view>
     <view>

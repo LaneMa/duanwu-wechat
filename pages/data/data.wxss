@@ -111,6 +111,12 @@
   justify-content:center; 
 }
 
+.data-ch {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
 .data text{
   padding-left: 5px;
 }
