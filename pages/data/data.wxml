@@ -1,2 +1,70 @@
-<!--pages/data/data.wxml-->
-<text>pages/data/data.wxml</text>
+<view class="top">
+    <view><image style="width: 25px; height: 25px;"  src="/images/left-circle.png" bindtap='tapLeft'></image></view>
+    <view>{{title}}</view>
+    <view><image style="width: 25px; height: 25px;"  src="/images/right-circle.png" bindtap='tapRight'></image></view>
+</view>
+
+<view wx:if="{{titleIdx == 0}}">
+  <view class="solo">
+    <view class="left">
+      <view><image  class="touxiang" src='/images/{{data.name}}.png'></image></view>
+      <text>{{data.name}}</text>
+    </view>
+    <view class="right">
+      <text>{{data.year}}dwb单挑王</text>
+      <text>{{data.win}}胜{{data.lose}}负</text>
+      <text>三分:{{data.three}}</text>
+      <text>两分:{{data.two}}</text>
+      <text>罚球:{{data.one}}</text>
+    </view>
+  </view>
+  <view class="slogan">{{data.slogan}}</view>
+</view>
+
+<view wx:if="{{titleIdx == 1}}">
+  <view class="solo">
+    <view class="left">
+      <view><image  class="touxiang" src='/images/{{data.name}}.png'></image></view>
+      <text>{{data.name}}</text>
+    </view>
+    <view class="right">
+      <text>{{data.year}}dwb三分王</text>
+      <text>三分总数:{{data.three}}</text>
+    </view>
+  </view>
+  <view class="slogan">{{data.slogan}}</view>
+</view>
+
+<view wx:if="{{titleIdx == 2}}">
+  <view class="solo">
+    <view class="left">
+      <view><image  class="touxiang" src='/images/{{data.name}}.png'></image></view>
+      <text>{{data.name}}</text>
+    </view>
+    <view class="right">
+      <text>{{data.year}}dwb篮板王</text>
+    <text>篮板数:{{data.backboard}}</text>
+    </view>
+  </view>
+  <view class="slogan">{{data.slogan}}</view>
+</view>
+
+
+<view wx:if="{{titleIdx == 3}}" class="champion">
+  <view class="title">
+    <view>{{data.year}}dwb冠军</view>
+    <view>无锡站</view>
+  </view>
+  <view class="content">
+    <view class="players"> 
+      <view wx:for="{{data.champion_players}}" wx:for-item="item" wx:key="{{name}}" class='data'>
+        <image src='/images/{{item.name}}.png' class="touxiang"></image>
+        <text>{{item.score}}分{{item.backboard}}板</text>
+      </view>
+    </view>
+    <view>
+      <view><image class="touxiang" src="/images/{{data.team}}.png"></image></view>
+      <view class='write-mod'>{{data.slogan}}</view>
+    </view>
+  </view>
+</view>

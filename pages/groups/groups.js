@@ -1,90 +1,4 @@
 // pages/groups/groups.js
-import * as echarts from '../../ec-canvas/echarts';
-
-function initChart(canvas, width, height) {
-  const chart = echarts.init(canvas, null, {
-    width: width,
-    height: height
-  });
-  canvas.setChart(chart);
-  var data1 = {
-    "name": "root",
-    "children": [{
-      "name": "a",
-     // "symbolSize":[32,32],
-      // "symbol":"image://http://img1.imgtn.bdimg.com/it/u=1393987749,3422146058&fm=26&gp=0.jpg",
-      "children": [{
-        "name": "a1"
-      }, {
-        "name": "a2"
-      }, {
-        "name": "a3"
-      }, {
-        "name": "a4"
-      }]
-    }, {
-      "name": "b",
-      "children": [{
-        "name": "b1"
-      }, {
-        "name": "b2"
-      }, {
-        "name": "b3"
-      }, {
-        "name": "b4"
-      }]
-    }, {
-      "name": "c",
-      "children": [{
-        "name": "c1"
-      }]
-    }, {
-      "name": "d",
-      "children": [{
-        "name": "d1"
-      }]
-    }]
-  };
-
-  var option = {
-    series: [{
-      type: 'tree',
-      orient: 'BT',
-      lineStyle:{
-        curveness:0,
-        width:1
-      }, 
-
-      initialTreeDepth: -1,
-      layerPadding:5,
-      nodePadding: 5,
-      name: 'tree1',
-      // rootLocation: { x: 'center', y: '10%' },
-
-      data: [data1],
-
-      // top: '5%',
-      // left: '20%',
-      // bottom: '2%',
-      // right: '15%',
-
-      symbolSize: 20,
-      symbol: 'circle',
-
-      label: {
-        normal: {
-          position: 'left',
-          verticalAlign: 'middle',
-          align: 'right',
-          color: 'black'
-        }
-      }
-
-    }]
-  };
-  chart.setOption(option);
-  return chart;
-}
 const app = getApp()
 Page({
 
@@ -97,10 +11,7 @@ Page({
     playersC:{},
     playersD:{},
     players:{},
-    flag:0,
-    ec: {
-      onInit: initChart
-    }
+    flag:0
   },
   onLoad: function() {
     let that = this;

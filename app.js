@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    host:"https://www.dwbattle.com/"
+    host:"http://localhost:10086/"
   }
 })

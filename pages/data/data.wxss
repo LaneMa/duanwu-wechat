@@ -1,1 +1,112 @@
-/* pages/data/data.wxss */
+.top {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid #888888;
+  font-size: 30px;
+  color: green;
+}
+
+.touxiang {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.solo {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  padding-top: 30px;
+  width: 100%;
+  
+}
+
+.solo .left {
+  margin-top: 20px;
+  margin-left:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 50%;
+}
+
+.solo .left view {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+}
+
+.solo .left text {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.solo .right {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  width: 50%;
+}
+
+.solo .right text {
+  padding-top: 10px;
+}
+
+.slogan {
+  margin-top: 120px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.champion {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.champion .title {
+   display: flex;
+   text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.champion .content {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+}
+
+
+.players {
+  display: flex;
+  flex-direction: column;
+  justify-content:center; 
+  width: 50%;
+}
+
+.data {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:center; 
+}
+
+.data text{
+  padding-left: 5px;
+}
+
+.champion .content .players .touxiang {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.write-mod {
+  writing-mode:vertical-rl;
+}
+
