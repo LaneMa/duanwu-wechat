@@ -1,11 +1,23 @@
 /* pages/groups/groups.wxss */
+.start-btn {
+  padding-bottom: 40px; 
+}
 
 .group {
+  padding-top: 20px;
   display: flex;
   width: 100%;
   justify-content: left;
   height: 3rem;
   align-items: center;
+}
+
+.group > view {
+  width: 100px;
+}
+
+.end-btn {
+  padding-top: 118px;
 }
 
 ec-canvas {

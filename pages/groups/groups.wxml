@@ -1,30 +1,30 @@
 <!--pages/groups/groups.wxml-->
 <!-- <<text>pages/groups/groups.wxml</text> -->
 <view>
-  <view><button bindtap='start'>开始</button></view>
-  <view><button bindtap='stop'>结束</button></view>
+  <view class='start-btn'><button bindtap='start'>开始</button></view>
   <view class = "group">
     A组：
-    <view wx:for="{{playersA}}" wx:for-item="item">
-      <view>{{item}},</view>
+    <view wx:for="{{playersA}}" wx:for-item="item" wx:for-index="index">
+      {{item}}
     </view>
   </view>  
   <view class = "group">
     B组：
     <view wx:for="{{playersB}}" wx:for-item="item">
-      <view>{{item}}, </view>
+       {{item}}
     </view>
   </view>  
   <view class = "group">
     C组：
     <view wx:for="{{playersC}}" wx:for-item="item">
-      <view>{{item}}, </view>
+       {{item}}
     </view>
   </view>  
   <view class = "group">
     D组：
     <view wx:for="{{playersD}}" wx:for-item="item">
-      <view>{{item}}, </view>
+       {{item}}
     </view>
   </view>
+  <view class="end-btn"><button bindtap='stop'>结束</button></view>
 </view>
