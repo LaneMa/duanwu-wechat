@@ -39,6 +39,9 @@ Page({
       }
     });
   },
+  onShow: function() {
+    this.onLoad();
+  },
   tabClick: function (e) {
     this.setData({
       sliderOffset: e.currentTarget.offsetLeft,
