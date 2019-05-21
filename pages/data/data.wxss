@@ -135,7 +135,6 @@
 }
 
 .suibian {
-  padding-top: 10px;
   display: flex;
   flex-direction: row;
 }
@@ -156,11 +155,29 @@
 .table {
   border: 0px solid darkgray;
 }
+.group_two {
+  display: flex;
+  flex-direction: row;
+}
+.group_one {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+}
+.group {
+  width: 160px;
+}
+.group_right {
+  padding-left: 60px;
+}
+.group_center {
+  padding-left: 160px;
+}
 .tr {
   display: flex;
   width: 100%;
   justify-content: center;
-  height: 3rem;
+  height: 2.5rem;
   align-items: center;
 }
 .td {
@@ -174,6 +191,12 @@
 }
 .bg-g{
   background: #E6F3F9;
+}
+.bg-win{
+  background: yellow;
+}
+.bg-half{
+  background: yellowgreen;
 }
 .th {
   width: 40%;

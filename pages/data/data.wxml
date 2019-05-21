@@ -130,3 +130,113 @@
       </view>
   </view>
 </view>
+
+<view wx:if="{{titleIdx == 7}}" class="champion">
+  <view class="title">
+    <view class="title">{{data.year}} dwb 无锡站</view>
+    <view>单挑赛对阵图</view>
+  </view>
+  <view class="suibian">
+    <view class="group_two">
+        <view class="table group">
+          <block wx:for="{{data.solo_group_list_a}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+        <view class="table group group_right">
+          <block wx:for="{{data.solo_group_list_c}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class="suibian">
+    <view class="group_one">
+        <view class="table group">
+          <block wx:for="{{data.solo_group_list_e}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-half">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class="suibian">
+    <view class="group_one">
+        <view class="table group">
+          <block wx:for="{{data.solo_group_list_g}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-win">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class="suibian">
+    <view class="group_one">
+        <view class="table group">
+          <block wx:for="{{data.solo_group_list_f}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-half">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class="suibian">
+    <view class="group_two">
+        <view class="table group">
+          <block wx:for="{{data.solo_group_list_b}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+        <view class="table group group_right">
+          <block wx:for="{{data.solo_group_list_d}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
+            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+            <view class="tr" wx:else>
+              <view class="td">{{item1.player_left}}</view>
+              <view class="td">{{item1.score}}</view>
+              <view class="td">{{item1.player_right}}</view>
+            </view>
+          </block>
+        </view>
+    </view>
+  </view>
+</view>

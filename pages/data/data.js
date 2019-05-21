@@ -72,7 +72,7 @@ Page({
   tapRight: function () {
     let that = this;
     let index = that.data.titleIdx;
-    if (index == 6) {
+    if (index == 7) {
       return;
     }
     index++;
@@ -208,8 +208,10 @@ function getUrl(index) {
     url += "/champion";
   } else if(index == 5){
     url += "/mvp";
-  } else {
+  } else if(index == 6) {
     url += "/statistics";
+  } else if(index == 7) {
+    url += "/map";
   }
   return url;
 }
