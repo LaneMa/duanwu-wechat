@@ -137,15 +137,19 @@
     <view>单挑赛对阵图</view>
   </view>
   <view class="suibian">
+      <view class="group_title_left">小组赛：A组</view>
+      <view class="group_title_right">小组赛：C组</view>
+  </view>
+  <view class="suibian">
     <view class="group_two">
         <view class="table group">
           <block wx:for="{{data.solo_group_list_a}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+            <view class="tr-map bg-g" wx:if="{{idx%2==0}}">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
             </view>
-            <view class="tr" wx:else>
+            <view class="tr-map" wx:else>
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -154,12 +158,12 @@
         </view>
         <view class="table group group_right">
           <block wx:for="{{data.solo_group_list_c}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+            <view class="tr-map bg-g" wx:if="{{idx%2==0}}">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
             </view>
-            <view class="tr" wx:else>
+            <view class="tr-map" wx:else>
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -169,10 +173,15 @@
     </view>
   </view>
   <view class="suibian">
+      <view class="group_raw_left">|</view>
+      <view class="group_raw_right">|</view>
+  </view>
+  <view class="suibian">
+    <view class="group_title_half">半决赛：E组</view>
     <view class="group_one">
         <view class="table group">
           <block wx:for="{{data.solo_group_list_e}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-half">
+            <view class="tr-map bg-half">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -182,10 +191,14 @@
     </view>
   </view>
   <view class="suibian">
+      <view class="group_raw_center">|</view>
+  </view>
+  <view class="suibian">
+    <view class="group_title_win">-决赛-</view>
     <view class="group_one">
         <view class="table group">
           <block wx:for="{{data.solo_group_list_g}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-win">
+            <view class="tr-map bg-win">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -195,10 +208,14 @@
     </view>
   </view>
   <view class="suibian">
+      <view class="group_raw_center">|</view>
+  </view>
+  <view class="suibian">
+    <view class="group_title_half">半决赛：F组</view>
     <view class="group_one">
         <view class="table group">
           <block wx:for="{{data.solo_group_list_f}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-half">
+            <view class="tr-map bg-half">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -206,17 +223,25 @@
           </block>
         </view>
     </view>
+  </view>
+  <view class="suibian">
+      <view class="group_raw_left">|</view>
+      <view class="group_raw_right">|</view>
+  </view>
+  <view class="suibian">
+      <view class="group_title_left">小组赛：B组</view>
+      <view class="group_title_right">小组赛：D组</view>
   </view>
   <view class="suibian">
     <view class="group_two">
         <view class="table group">
           <block wx:for="{{data.solo_group_list_b}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+            <view class="tr-map bg-g" wx:if="{{idx%2==0}}">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
             </view>
-            <view class="tr" wx:else>
+            <view class="tr-map" wx:else>
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
@@ -225,12 +250,12 @@
         </view>
         <view class="table group group_right">
           <block wx:for="{{data.solo_group_list_d}}" wx:for-index="idx" wx:key="{{id}}" wx:for-item="item1">
-            <view class="tr bg-g" wx:if="{{idx%2==0}}">
+            <view class="tr-map bg-g" wx:if="{{idx%2==0}}">
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
             </view>
-            <view class="tr" wx:else>
+            <view class="tr-map" wx:else>
               <view class="td">{{item1.player_left}}</view>
               <view class="td">{{item1.score}}</view>
               <view class="td">{{item1.player_right}}</view>
